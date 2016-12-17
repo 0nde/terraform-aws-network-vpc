@@ -1,0 +1,9 @@
+# internet gateway
+
+resource "aws_internet_gateway" "default" {
+  vpc_id = "${aws_vpc.default.id}"
+  tags {
+    name    = "${var.resource_name}-igw"
+    billing = "${var.billing}"
+  }
+}
