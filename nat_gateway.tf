@@ -1,6 +1,7 @@
 # nat gateway
 
 resource "aws_eip" "nat" {
+    vpc = true
 }
 
 resource "aws_nat_gateway" "default" {
