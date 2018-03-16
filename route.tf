@@ -11,8 +11,8 @@ resource "aws_default_route_table" "public" {
     gateway_id = "${aws_internet_gateway.default.id}"
   }
   tags {
-    name    = "${var.resource_name}-public-route-table"
-    billing = "${var.billing}"
+    Name    = "${var.resource_name}-public-route-table"
+    Billing = "${var.billing}"
   }
 }
 
@@ -42,8 +42,8 @@ resource "aws_route_table" "private" {
     nat_gateway_id = "${aws_nat_gateway.default.id}"
   }
   tags {
-    name    = "${var.resource_name}-private-route-table"
-    billing = "${var.billing}"
+    Name    = "${var.resource_name}-private-route-table"
+    Billing = "${var.billing}"
   }
 }
 

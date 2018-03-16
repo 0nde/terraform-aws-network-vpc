@@ -5,7 +5,7 @@ resource "aws_vpc" "default" {
   enable_dns_support   = true
   enable_dns_hostnames = true
   tags {
-    name    = "${var.resource_name}-vpc"
-    billing = "${var.billing}"
+    Name    = "${var.resource_name}-vpc"
+    Billing = "${var.billing}"
   }
 }

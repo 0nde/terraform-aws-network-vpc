@@ -8,8 +8,8 @@ resource "aws_subnet" "front" {
   map_public_ip_on_launch = false
   vpc_id                  = "${aws_vpc.default.id}"
   tags {
-    name    = "${var.resource_name}-${format("front-%02d", count.index + 1)}"
-    billing = "${var.billing}"
+    Name    = "${var.resource_name}-${format("front-%02d", count.index + 1)}"
+    Billing = "${var.billing}"
   }
 }
 
@@ -20,8 +20,8 @@ resource "aws_subnet" "dataapp" {
   map_public_ip_on_launch = false
   vpc_id                  = "${aws_vpc.default.id}"
   tags {
-    name    = "${var.resource_name}-${format("dataapp-%02d", count.index + 1)}"
-    billing = "${var.billing}"
+    Name    = "${var.resource_name}-${format("dataapp-%02d", count.index + 1)}"
+    Billing = "${var.billing}"
   }
 }
 
@@ -32,8 +32,8 @@ resource "aws_subnet" "dmz" {
   map_public_ip_on_launch = true
   vpc_id                  = "${aws_vpc.default.id}"
   tags {
-    name    = "${var.resource_name}-${format("dmz-%02d", count.index + 1)}"
-    billing = "${var.billing}"
+    Name    = "${var.resource_name}-${format("dmz-%02d", count.index + 1)}"
+    Billing = "${var.billing}"
   }
 }
 
@@ -44,7 +44,7 @@ resource "aws_subnet" "admin" {
   map_public_ip_on_launch = true
   vpc_id                  = "${aws_vpc.default.id}"
   tags {
-    name    = "${var.resource_name}-${format("admin-%02d", count.index + 1)}"
-    billing = "${var.billing}"
+    Name    = "${var.resource_name}-${format("admin-%02d", count.index + 1)}"
+    Billing = "${var.billing}"
   }
 }

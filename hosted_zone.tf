@@ -3,7 +3,7 @@ resource "aws_route53_zone" "default" {
   vpc_id  = "${aws_vpc.default.id}"
   comment = "${var.resource_name} private zone"
   tags {
-    name    = "${var.resource_name}"
-    billing = "${var.billing}"
+    Name    = "${var.resource_name}"
+    Billing = "${var.billing}"
   }
 }
